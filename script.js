@@ -7,3 +7,17 @@ helloBtn.addEventListener(
         helloTag.innerHTML = "Hello!";
     } 
 );
+
+
+// objekt exempel
+
+const person = {
+    firstName:"Ludwig",
+    lastName:"Kallin",
+    age:"24",
+    skills:["programming", "gaming", "music"]
+};
+
+person.fullName = function(){
+    return this.firstName + " " + this.lastName;
+}
