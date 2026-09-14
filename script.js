@@ -42,3 +42,28 @@ function calculateFunction(){
     number2 = Number(secondNumber.value);
     showResult.innerHTML = number1 + number2;
 }
+
+//matte test
+let numberOfQuestions = 0;
+let correctAnswer;
+const numberOfTestsInput=document.querySelector("#numberOfTests");
+const showQuestionBtn=document.querySelector("#showQuestionBtn");
+const showQuestion=document.querySelector("#showQuestion");
+
+showQuestionBtn.addEventListener(
+    "click",
+    showTest
+);
+
+function showTest(){
+    numberOfTests = numberOfTestsInput.value;
+if (numberOfTests === 0 || numberOfTests == undefined)
+        return;
+
+    number1 = Math.round(Math.random() * 10);
+    number2 = Math.round(Math.random() * 10);
+    correctAnswer = number1 + number2;
+
+    showQuestion.innerHTML = "Vad är " + number1 + " + " + number2 + "?"; 
+
+}
